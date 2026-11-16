@@ -105,6 +105,7 @@ async function generateOtp(identifier, purpose = 'signup') {
   );
 
   const code = String(Math.floor(100000 + Math.random() * 900000));
+  console.log(`[OTP Generated] For ${identifier} (${purpose}): ${code}`);
   const id = crypto.randomUUID();
   const expiresAt = Date.now() + OTP_EXPIRY_MS;
 
