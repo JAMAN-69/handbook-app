@@ -9,7 +9,10 @@
 (function () {
   'use strict';
 
-  const BASE_URL = window.location.origin; // same origin (Express serves frontend)
+  const BACKEND_URL = 'https://handbook-backend-lvf7.onrender.com';
+  const BASE_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? window.location.origin
+    : BACKEND_URL;
   const API = `${BASE_URL}/api`;
 
   // -------------------------------------------------------------------------

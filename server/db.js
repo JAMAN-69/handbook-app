@@ -4,7 +4,7 @@ const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 const bcrypt = require('bcryptjs');
 
-const DB_PATH = path.join(__dirname, '..', 'handbook.db');
+const DB_PATH = process.env.DB_PATH || path.join(__dirname, '..', 'handbook.db');
 
 let db;
 
