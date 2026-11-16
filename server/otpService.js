@@ -4,7 +4,7 @@ require('dotenv').config();
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
 const { run, get, all } = require('./db');
-const { sendViaResend } = require('./resendSender');
+const { sendViaBrevo, sendViaResend } = require('./resendSender');
 
 
 // ---------------------------------------------------------------------------
@@ -171,7 +171,11 @@ async function sendEmailOtp(email, code, purpose = 'signup') {
     </div>
   `;
 
-  // ── Method 1: Resend API (HTTPS port 443 — works even when SMTP is blocked) ──
+  // ── Method 1: Brevo API (best for Render — HTTPS port 443, any recipient) ──
+  const sentViaBrevo = await sendViaBrevo(email, subject, body);
+  if (sentViaBrevo) return;
+
+  // ── Method 2: Resend API (HTTPS port 443 — works even when SMTP is blocked) ──
   const sentViaApi = await sendViaResend(email, subject, body);
   if (sentViaApi) return;
 
