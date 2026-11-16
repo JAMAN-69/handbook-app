@@ -1,0 +1,37 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "server/**",
+      "**/*.db",
+      "**/*.db-shm",
+      "**/*.db-wal",
+      "**/*.log",
+      "auth_export.json",
+      "package.json",
+      "package-lock.json",
+      "debug-screenshot.js",
+      "find_hero.py",
+      "find_polaroid_icon.py",
+      "take-screenshot.js",
+      "test-*.js"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          { "key": "Cache-Control", "value": "max-age=86400" }
+        ]
+      }
+    ]
+  }
+}

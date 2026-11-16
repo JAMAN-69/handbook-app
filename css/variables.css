@@ -1,0 +1,338 @@
+/* ============================================================
+   HANDBOOK — Design Tokens & CSS Custom Properties
+   Premium Social Media Platform
+   ============================================================ */
+
+/* -------------------------------------------------------
+   1. ROOT DEFAULTS (Dark Mode — the default theme)
+   ------------------------------------------------------- */
+:root {
+  /* — Color Palette: Brand -------------------------------- */
+  --color-primary:            #1877f2;
+  --color-primary-hover:      #1a6de0;
+  --color-primary-active:     #1560cc;
+  --color-primary-light:      rgba(24, 119, 242, 0.15);
+  --color-primary-ghost:      rgba(24, 119, 242, 0.08);
+  --color-secondary:          #42b72a;
+  --color-secondary-hover:    #3aa524;
+  --color-accent:             #e84393;
+  --color-accent-hover:       #d63384;
+
+  /* — Color Palette: Semantic ----------------------------- */
+  --color-success:            #42b72a;
+  --color-success-bg:         rgba(66, 183, 42, 0.12);
+  --color-warning:            #f7b928;
+  --color-warning-bg:         rgba(247, 185, 40, 0.12);
+  --color-error:              #f02849;
+  --color-error-bg:           rgba(240, 40, 73, 0.12);
+  --color-info:               #1877f2;
+  --color-info-bg:            rgba(24, 119, 242, 0.12);
+
+  /* — Color Palette: Surfaces (Dark) --------------------- */
+  --color-bg-primary:         #1a1a2e;
+  --color-bg-secondary:       #16213e;
+  --color-bg-tertiary:        #0f3460;
+  --color-bg-elevated:        #1e2746;
+  --color-bg-overlay:         rgba(10, 10, 20, 0.75);
+  --color-bg-modal:           rgba(0, 0, 0, 0.6);
+  --color-bg-hover:           rgba(255, 255, 255, 0.06);
+  --color-bg-active:          rgba(255, 255, 255, 0.10);
+  --color-bg-input:           #0d1b2a;
+  --color-bg-card:            #1e2746;
+  --color-bg-tooltip:         #2a3456;
+  --color-bg-skeleton:        #1e2746;
+  --color-bg-skeleton-shine:  #2a3456;
+  --color-bg-chat-sent:       #1877f2;
+  --color-bg-chat-received:   #2a3456;
+
+  /* — Color Palette: Text (Dark) ------------------------- */
+  --color-text-primary:       #e4e6eb;
+  --color-text-secondary:     #b0b3b8;
+  --color-text-tertiary:      #8a8d91;
+  --color-text-disabled:      #5a5d62;
+  --color-text-inverse:       #1a1a2e;
+  --color-text-link:          #4599ff;
+  --color-text-link-hover:    #6db3ff;
+  --color-text-on-primary:    #ffffff;
+  --color-text-on-dark:       #ffffff;
+  --color-text-placeholder:   #6a6d72;
+  --color-text-chat-sent:     #ffffff;
+  --color-text-chat-received: #e4e6eb;
+
+  /* — Color Palette: Borders (Dark) ---------------------- */
+  --color-border:             rgba(255, 255, 255, 0.10);
+  --color-border-strong:      rgba(255, 255, 255, 0.18);
+  --color-border-focus:       #1877f2;
+  --color-border-error:       #f02849;
+  --color-border-card:        rgba(255, 255, 255, 0.06);
+  --color-divider:            rgba(255, 255, 255, 0.08);
+
+  /* — Color Palette: Story Gradient ---------------------- */
+  --gradient-story:           linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  --gradient-story-bg:        linear-gradient(135deg, #1a1a2e, #16213e);
+  --gradient-primary:         linear-gradient(135deg, #1877f2, #4599ff);
+  --gradient-accent:          linear-gradient(135deg, #e84393, #fd79a8);
+  --gradient-dark:            linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+
+  /* — Glassmorphism -------------------------------------- */
+  --glass-bg:                 rgba(30, 39, 70, 0.65);
+  --glass-bg-strong:          rgba(30, 39, 70, 0.85);
+  --glass-border:             rgba(255, 255, 255, 0.08);
+  --glass-blur:               16px;
+  --glass-blur-strong:        24px;
+
+  /* — Scrollbar (Dark) ----------------------------------- */
+  --scrollbar-track:          #1a1a2e;
+  --scrollbar-thumb:          #2a3456;
+  --scrollbar-thumb-hover:    #3a4566;
+
+  /* -------------------------------------------------------
+     2. SPACING SCALE (4px base)
+     ------------------------------------------------------- */
+  --space-0:    0;
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:    12px;
+  --space-4:    16px;
+  --space-5:    20px;
+  --space-6:    24px;
+  --space-7:    28px;
+  --space-8:    32px;
+  --space-9:    36px;
+  --space-10:   40px;
+  --space-12:   48px;
+  --space-14:   56px;
+  --space-16:   64px;
+  --space-20:   80px;
+  --space-24:   96px;
+  --space-32:   128px;
+
+  /* -------------------------------------------------------
+     3. BORDER RADIUS
+     ------------------------------------------------------- */
+  --radius-xs:   4px;
+  --radius-sm:   6px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  20px;
+  --radius-3xl:  24px;
+  --radius-full: 9999px;
+  --radius-card: 12px;
+
+  /* -------------------------------------------------------
+     4. BOX SHADOWS
+     ------------------------------------------------------- */
+  --shadow-xs:      0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-sm:      0 2px 4px rgba(0, 0, 0, 0.30);
+  --shadow-md:      0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg:      0 8px 24px rgba(0, 0, 0, 0.40);
+  --shadow-xl:      0 16px 48px rgba(0, 0, 0, 0.50);
+  --shadow-2xl:     0 24px 64px rgba(0, 0, 0, 0.55);
+  --shadow-inner:   inset 0 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-card:    0 2px 8px rgba(0, 0, 0, 0.30), 0 0 1px rgba(255, 255, 255, 0.05);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.40), 0 0 1px rgba(255, 255, 255, 0.08);
+  --shadow-modal:   0 24px 80px rgba(0, 0, 0, 0.60);
+  --shadow-dropdown: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-toast:   0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-glow-primary: 0 0 20px rgba(24, 119, 242, 0.30);
+  --shadow-glow-success: 0 0 20px rgba(66, 183, 42, 0.30);
+  --shadow-glow-error:   0 0 20px rgba(240, 40, 73, 0.30);
+  --shadow-glow-accent:  0 0 20px rgba(232, 67, 147, 0.30);
+  --shadow-focus:   0 0 0 3px rgba(24, 119, 242, 0.35);
+  --shadow-btn:     0 2px 6px rgba(0, 0, 0, 0.25);
+  --shadow-btn-hover: 0 4px 12px rgba(0, 0, 0, 0.35);
+
+  /* -------------------------------------------------------
+     5. TYPOGRAPHY
+     ------------------------------------------------------- */
+  --font-family-body:     'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-heading:  'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono:     'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+
+  /* Font sizes — fluid / clamp optional */
+  --text-2xs:     0.625rem;   /* 10px */
+  --text-xs:      0.75rem;    /* 12px */
+  --text-sm:      0.8125rem;  /* 13px */
+  --text-base:    0.9375rem;  /* 15px */
+  --text-md:      1rem;       /* 16px */
+  --text-lg:      1.125rem;   /* 18px */
+  --text-xl:      1.25rem;    /* 20px */
+  --text-2xl:     1.5rem;     /* 24px */
+  --text-3xl:     1.875rem;   /* 30px */
+  --text-4xl:     2.25rem;    /* 36px */
+  --text-5xl:     3rem;       /* 48px */
+
+  /* Line heights */
+  --leading-none:    1;
+  --leading-tight:   1.2;
+  --leading-snug:    1.35;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose:   2;
+
+  /* Font weights */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* Letter spacing */
+  --tracking-tighter: -0.04em;
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.02em;
+  --tracking-wider:   0.04em;
+
+  /* -------------------------------------------------------
+     6. TRANSITIONS & TIMING
+     ------------------------------------------------------- */
+  --duration-fast:     120ms;
+  --duration-normal:   200ms;
+  --duration-moderate: 300ms;
+  --duration-slow:     400ms;
+  --duration-slower:   600ms;
+
+  --ease-default:   cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in:        cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:       cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce:    cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  --ease-elastic:   cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --ease-spring:    cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  --transition-fast:     all 120ms var(--ease-default);
+  --transition-normal:   all 200ms var(--ease-default);
+  --transition-moderate: all 300ms var(--ease-default);
+  --transition-slow:     all 400ms var(--ease-default);
+  --transition-color:    color 200ms var(--ease-default), background-color 200ms var(--ease-default), border-color 200ms var(--ease-default);
+  --transition-transform: transform 200ms var(--ease-default);
+  --transition-shadow:   box-shadow 200ms var(--ease-default);
+  --transition-opacity:  opacity 200ms var(--ease-default);
+
+  /* -------------------------------------------------------
+     7. Z-INDEX SCALE
+     ------------------------------------------------------- */
+  --z-behind:      -1;
+  --z-base:        0;
+  --z-raised:      1;
+  --z-dropdown:    100;
+  --z-sticky:      200;
+  --z-header:      300;
+  --z-sidebar:     350;
+  --z-overlay:     400;
+  --z-modal:       500;
+  --z-popover:     600;
+  --z-tooltip:     700;
+  --z-toast:       800;
+  --z-max:         9999;
+
+  /* -------------------------------------------------------
+     8. LAYOUT DIMENSIONS
+     ------------------------------------------------------- */
+  --header-height:        60px;
+  --sidebar-left-width:   280px;
+  --sidebar-right-width:  320px;
+  --mobile-nav-height:    60px;
+  --container-max-width:  1440px;
+  --feed-max-width:       680px;
+  --modal-width-sm:       400px;
+  --modal-width-md:       560px;
+  --modal-width-lg:       720px;
+
+  /* -------------------------------------------------------
+     9. AVATAR SIZES
+     ------------------------------------------------------- */
+  --avatar-xs:  24px;
+  --avatar-sm:  32px;
+  --avatar-md:  40px;
+  --avatar-lg:  56px;
+  --avatar-xl:  80px;
+  --avatar-2xl: 120px;
+
+  /* -------------------------------------------------------
+     10. MISC
+     ------------------------------------------------------- */
+  --online-indicator-size: 12px;
+  --badge-size:            20px;
+  --story-ring-size:       3px;
+  --toast-width:           380px;
+}
+
+
+/* -------------------------------------------------------
+   LIGHT THEME OVERRIDES
+   ------------------------------------------------------- */
+[data-theme="light"] {
+  /* Surfaces */
+  --color-bg-primary:         #f0f2f5;
+  --color-bg-secondary:       #ffffff;
+  --color-bg-tertiary:        #e4e6eb;
+  --color-bg-elevated:        #ffffff;
+  --color-bg-overlay:         rgba(255, 255, 255, 0.80);
+  --color-bg-modal:           rgba(0, 0, 0, 0.45);
+  --color-bg-hover:           rgba(0, 0, 0, 0.04);
+  --color-bg-active:          rgba(0, 0, 0, 0.08);
+  --color-bg-input:           #f0f2f5;
+  --color-bg-card:            #ffffff;
+  --color-bg-tooltip:         #1c1e21;
+  --color-bg-skeleton:        #e4e6eb;
+  --color-bg-skeleton-shine:  #f0f2f5;
+  --color-bg-chat-sent:       #1877f2;
+  --color-bg-chat-received:   #e4e6eb;
+
+  /* Text */
+  --color-text-primary:       #1c1e21;
+  --color-text-secondary:     #606770;
+  --color-text-tertiary:      #8a8d91;
+  --color-text-disabled:      #bec3c9;
+  --color-text-inverse:       #ffffff;
+  --color-text-link:          #1877f2;
+  --color-text-link-hover:    #1460c8;
+  --color-text-on-primary:    #ffffff;
+  --color-text-on-dark:       #ffffff;
+  --color-text-placeholder:   #8a8d91;
+  --color-text-chat-sent:     #ffffff;
+  --color-text-chat-received: #1c1e21;
+
+  /* Borders */
+  --color-border:             rgba(0, 0, 0, 0.10);
+  --color-border-strong:      rgba(0, 0, 0, 0.18);
+  --color-border-card:        rgba(0, 0, 0, 0.08);
+  --color-divider:            rgba(0, 0, 0, 0.08);
+
+  /* Glassmorphism */
+  --glass-bg:                 rgba(255, 255, 255, 0.70);
+  --glass-bg-strong:          rgba(255, 255, 255, 0.88);
+  --glass-border:             rgba(0, 0, 0, 0.06);
+
+  /* Shadows (lighter for light mode) */
+  --shadow-xs:      0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-sm:      0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md:      0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-lg:      0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-xl:      0 16px 48px rgba(0, 0, 0, 0.15);
+  --shadow-2xl:     0 24px 64px rgba(0, 0, 0, 0.18);
+  --shadow-inner:   inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-card:    0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  --shadow-modal:   0 24px 80px rgba(0, 0, 0, 0.20);
+  --shadow-dropdown: 0 8px 32px rgba(0, 0, 0, 0.15);
+  --shadow-toast:   0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-btn:     0 1px 3px rgba(0, 0, 0, 0.10);
+  --shadow-btn-hover: 0 3px 8px rgba(0, 0, 0, 0.14);
+  --shadow-glow-primary: 0 0 20px rgba(24, 119, 242, 0.20);
+  --shadow-glow-success: 0 0 20px rgba(66, 183, 42, 0.20);
+  --shadow-glow-error:   0 0 20px rgba(240, 40, 73, 0.20);
+  --shadow-glow-accent:  0 0 20px rgba(232, 67, 147, 0.20);
+
+  /* Scrollbar */
+  --scrollbar-track:          #f0f2f5;
+  --scrollbar-thumb:          #c4c8ce;
+  --scrollbar-thumb-hover:    #a8adb5;
+
+  /* Gradients */
+  --gradient-story-bg:        linear-gradient(135deg, #f0f2f5, #ffffff);
+  --gradient-dark:            linear-gradient(180deg, #f0f2f5 0%, #ffffff 100%);
+}
